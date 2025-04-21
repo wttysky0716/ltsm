@@ -1,0 +1,39 @@
+Mar 22 08:00:01 server-01 systemd[1]: Started Daily apt download activities.
+Mar 22 08:15:31 server-01 kernel: [12345.678910] CPU: 2 PID: 1234 Comm: nginx Not tainted 5.4.0-42-generic
+Mar 22 08:15:32 server-01 kernel: [12345.678915] Hardware name: Dell Inc. PowerEdge R740/0WDFHX, BIOS 2.4.8 01/15/2020
+Mar 22 08:30:45 server-01 systemd[1]: Starting Cleanup of Temporary Directories...
+Mar 22 08:30:47 server-01 systemd[1]: Finished Cleanup of Temporary Directories.
+Mar 22 09:00:01 server-01 CRON[12345]: (root) CMD (/usr/bin/system-update)
+Mar 22 09:15:22 server-01 dhclient[789]: DHCPACK from 192.168.1.1 (xid=0x3c563a82)
+Mar 22 09:15:23 server-01 dhclient[789]: bound to 192.168.1.100 -- renewal in 36000 seconds.
+Mar 22 10:23:16 server-01 kernel: [23456.789101] EXT4-fs (sda1): mounted filesystem with ordered data mode
+Mar 22 10:45:33 server-01 systemd[1]: Starting Daily apt upgrade and clean activities...
+Mar 22 10:45:35 server-01 systemd[1]: Finished Daily apt upgrade and clean activities.
+Mar 22 11:30:27 server-01 kernel: [34567.891011] EXT4-fs error (device sda2): ext4_lookup:1601: inode #4587520: comm apache2: deleted inode referenced: 4587525
+Mar 22 11:30:28 server-01 kernel: [34567.891015] EXT4-fs error (device sda2): ext4_lookup:1601: inode #4587520: comm apache2: deleted inode referenced: 4587526
+Mar 22 12:15:01 server-01 CRON[23456]: (www-data) CMD (/usr/bin/php /var/www/html/cron.php)
+Mar 22 13:42:17 server-01 nginx[34567]: 192.168.1.200 - - [22/Mar/2023:13:42:17 +0000] "GET /index.html HTTP/1.1" 200 4563 "-" "Mozilla/5.0"
+Mar 22 14:17:02 server-01 nginx[34568]: 192.168.1.201 - - [22/Mar/2023:14:17:02 +0000] "GET /admin HTTP/1.1" 404 169 "-" "Mozilla/5.0"
+Mar 22 14:17:05 server-01 nginx[34569]: 192.168.1.201 - - [22/Mar/2023:14:17:05 +0000] "GET /phpmyadmin HTTP/1.1" 404 169 "-" "Mozilla/5.0"
+Mar 22 14:17:08 server-01 nginx[34570]: 192.168.1.201 - - [22/Mar/2023:14:17:08 +0000] "GET /wp-admin HTTP/1.1" 404 169 "-" "Mozilla/5.0"
+Mar 22 15:00:01 server-01 CRON[45678]: (root) CMD (/usr/bin/system-backup)
+Mar 22 15:45:33 server-01 kernel: [45678.910111] Out of memory: Kill process 56789 (java) score 678 or sacrifice child
+Mar 22 15:45:34 server-01 kernel: [45678.910115] Killed process 56789 (java) total-vm:8196kB, anon-rss:1012kB, file-rss:0kB, shmem-rss:0kB
+Mar 22 16:30:12 server-01 systemd[1]: Starting Apache Service...
+Mar 22 16:30:15 server-01 systemd[1]: Started Apache Service.
+Mar 22 17:12:45 server-01 systemd-logind[567]: New session 12345 of user admin.
+Mar 22 18:27:33 server-01 sudo[67890]: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/systemctl restart nginx
+Mar 22 19:14:01 server-01 nginx[34571]: 2023/03/22 19:14:01 [error] 34571#34571: *123 open() "/var/www/html/missing.jpg" failed (2: No such file or directory)
+Mar 22 20:00:01 server-01 CRON[78901]: (root) CMD (/usr/bin/system-check)
+Mar 22 21:34:17 server-01 systemd[1]: Starting Daily database backup...
+Mar 22 21:34:20 server-01 systemd[1]: Finished Daily database backup.
+Mar 22 22:45:12 server-01 kernel: [56789.101112] TCP: request_sock_TCP: Possible SYN flooding on port 80. Sending cookies.
+Mar 22 23:15:33 server-01 sshd[89012]: Connection closed by 192.168.1.100 port 52413 [preauth]
+Mar 23 00:00:01 server-01 systemd[1]: Starting Daily update of the locate database...
+Mar 23 00:00:05 server-01 systemd[1]: Finished Daily update of the locate database.
+Mar 23 01:30:45 server-01 kernel: [67890.111213] CPU: 1 PID: 4321 Comm: apache2 Not tainted 5.4.0-42-generic
+Mar 23 02:15:22 server-01 systemd[1]: Starting Daily apt download activities...
+Mar 23 03:45:33 server-01 kernel: [78901.121314] EXT4-fs warning (device sda3): ext4_extend_transaction:6360: Detected aborted journal
+Mar 23 04:00:01 server-01 CRON[90123]: (root) CMD (/usr/bin/system-update)
+Mar 23 05:27:33 server-01 kernel: [89012.131415] memory: usage 4096kB, limit 4096kB, failcnt 1
+Mar 23 05:27:34 server-01 kernel: [89012.131418] memory cgroup out of memory: Kill process 12345 (php-fpm) score 205 or sacrifice child 

@@ -1,0 +1,29 @@
+Mar 22 08:14:22 server-01 sshd[12345]: Accepted password for admin from 192.168.1.100 port 52413 ssh2
+Mar 22 08:18:03 server-01 sshd[12347]: Accepted password for user1 from 192.168.1.101 port 52414 ssh2
+Mar 22 09:23:45 server-01 sshd[12348]: Failed password for user2 from 192.168.1.102 port 52415 ssh2
+Mar 22 10:11:32 server-01 sshd[12350]: Accepted password for user1 from 192.168.1.101 port 52418 ssh2
+Mar 22 11:34:17 server-01 sshd[12352]: Failed password for invalid user hacker from 10.0.0.99 port 40111 ssh2
+Mar 22 11:34:21 server-01 sshd[12353]: Failed password for invalid user admin from 10.0.0.99 port 40112 ssh2
+Mar 22 11:34:25 server-01 sshd[12354]: Failed password for invalid user root from 10.0.0.99 port 40113 ssh2
+Mar 22 11:34:29 server-01 sshd[12355]: Failed password for invalid user oracle from 10.0.0.99 port 40114 ssh2
+Mar 22 11:34:33 server-01 sshd[12356]: Failed password for invalid user test from 10.0.0.99 port 40115 ssh2
+Mar 22 14:25:46 server-01 sshd[12360]: Accepted password for user3 from 192.168.1.103 port 52420 ssh2
+Mar 22 16:37:12 server-01 sshd[12365]: Failed password for user2 from 192.168.1.102 port 52425 ssh2
+Mar 22 16:37:18 server-01 sshd[12366]: Failed password for user2 from 192.168.1.102 port 52426 ssh2
+Mar 22 16:37:22 server-01 sshd[12367]: Accepted password for user2 from 192.168.1.102 port 52427 ssh2
+Mar 22 18:43:01 server-01 sshd[12370]: Failed password for user4 from 192.168.1.104 port 52430 ssh2
+Mar 22 21:12:34 server-01 sshd[12372]: Accepted password for admin from 192.168.1.100 port 52432 ssh2
+Mar 23 02:14:22 server-01 sshd[12375]: Failed password for admin from 8.8.8.8 port 52435 ssh2
+Mar 23 02:14:32 server-01 sshd[12376]: Failed password for admin from 8.8.8.8 port 52436 ssh2
+Mar 23 02:14:42 server-01 sshd[12377]: Failed password for admin from 8.8.8.8 port 52437 ssh2
+Mar 23 03:23:45 server-01 sshd[12380]: Accepted password for user5 from 192.168.1.105 port 52440 ssh2
+Mar 23 08:11:32 server-01 sshd[12382]: Accepted password for user1 from 192.168.1.101 port 52442 ssh2
+Mar 23 10:45:56 server-01 sshd[12385]: Accepted password for user3 from 192.168.1.103 port 52445 ssh2
+Mar 23 13:27:03 server-01 sshd[12388]: Failed password for invalid user postgres from 10.1.1.99 port 40211 ssh2
+Mar 23 13:27:05 server-01 sshd[12389]: Failed password for invalid user mysql from 10.1.1.99 port 40212 ssh2
+Mar 23 13:27:07 server-01 sshd[12390]: Failed password for invalid user apache from 10.1.1.99 port 40213 ssh2
+Mar 23 14:34:17 server-01 sshd[12392]: Accepted password for user2 from 192.168.1.102 port 52450 ssh2
+Mar 23 19:37:12 server-01 sshd[12395]: Failed password for user2 from 192.168.1.102 port 52455 ssh2
+Mar 23 19:38:18 server-01 sshd[12396]: Accepted password for user2 from 192.168.1.102 port 52456 ssh2
+Mar 23 22:43:01 server-01 sshd[12398]: Failed password for user4 from 192.168.1.104 port 52458 ssh2
+Mar 24 01:12:34 server-01 sshd[12400]: Accepted password for admin from 192.168.1.100 port 52460 ssh2 

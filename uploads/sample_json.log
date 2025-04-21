@@ -1,0 +1,31 @@
+{"timestamp":"2023-03-22T08:14:22.123Z","level":"info","message":"Application started successfully","service":"api-server","hostname":"app-server-01","version":"1.2.3"}
+{"timestamp":"2023-03-22T08:15:37.456Z","level":"info","message":"User login successful","service":"auth-service","hostname":"app-server-01","userId":"user123","ip":"192.168.1.100"}
+{"timestamp":"2023-03-22T08:23:45.789Z","level":"warn","message":"High CPU usage detected","service":"monitoring","hostname":"app-server-01","cpu":85.2,"memory":60.5}
+{"timestamp":"2023-03-22T09:12:34.567Z","level":"info","message":"Database connection established","service":"db-service","hostname":"app-server-01","database":"users_db"}
+{"timestamp":"2023-03-22T09:45:12.345Z","level":"info","message":"API request completed","service":"api-server","hostname":"app-server-01","path":"/api/users","method":"GET","status":200,"duration":120}
+{"timestamp":"2023-03-22T10:17:23.456Z","level":"error","message":"Failed to connect to external service","service":"integration","hostname":"app-server-01","target":"payment-gateway","attempt":1,"error":"Connection timeout"}
+{"timestamp":"2023-03-22T10:17:28.789Z","level":"error","message":"Failed to connect to external service","service":"integration","hostname":"app-server-01","target":"payment-gateway","attempt":2,"error":"Connection timeout"}
+{"timestamp":"2023-03-22T10:17:33.012Z","level":"error","message":"Failed to connect to external service","service":"integration","hostname":"app-server-01","target":"payment-gateway","attempt":3,"error":"Connection timeout"}
+{"timestamp":"2023-03-22T10:18:45.345Z","level":"info","message":"Retrying connection established successfully","service":"integration","hostname":"app-server-01","target":"payment-gateway","attempt":4}
+{"timestamp":"2023-03-22T11:20:12.678Z","level":"info","message":"Cache cleared successfully","service":"cache-service","hostname":"app-server-01","items_removed":1520}
+{"timestamp":"2023-03-22T12:05:34.901Z","level":"info","message":"User logout","service":"auth-service","hostname":"app-server-01","userId":"user123","session_duration":"03:50:12"}
+{"timestamp":"2023-03-22T12:30:56.234Z","level":"info","message":"Scheduled job started","service":"scheduler","hostname":"app-server-01","job_id":"backup-db"}
+{"timestamp":"2023-03-22T12:32:01.567Z","level":"info","message":"Scheduled job completed","service":"scheduler","hostname":"app-server-01","job_id":"backup-db","duration":65.33}
+{"timestamp":"2023-03-22T13:14:22.890Z","level":"info","message":"User login successful","service":"auth-service","hostname":"app-server-01","userId":"admin","ip":"192.168.1.101"}
+{"timestamp":"2023-03-22T13:15:43.123Z","level":"info","message":"Configuration changed","service":"admin-panel","hostname":"app-server-01","userId":"admin","changes":{"max_connections":200,"timeout":30}}
+{"timestamp":"2023-03-22T13:45:12.456Z","level":"warn","message":"Unusual traffic pattern detected","service":"security","hostname":"app-server-01","source_ip":"10.0.0.25","requests":150,"timeframe":"5min"}
+{"timestamp":"2023-03-22T14:12:34.789Z","level":"warn","message":"Multiple authentication failures","service":"auth-service","hostname":"app-server-01","userId":"user456","ip":"10.0.0.25","failures":5}
+{"timestamp":"2023-03-22T14:13:45.012Z","level":"error","message":"Account locked due to multiple failures","service":"auth-service","hostname":"app-server-01","userId":"user456","ip":"10.0.0.25"}
+{"timestamp":"2023-03-22T15:20:34.345Z","level":"info","message":"Service health check","service":"monitoring","hostname":"app-server-01","status":"healthy","response_time":23}
+{"timestamp":"2023-03-22T16:15:42.678Z","level":"critical","message":"Database connection lost","service":"db-service","hostname":"app-server-01","database":"users_db","error":"Connection refused"}
+{"timestamp":"2023-03-22T16:15:47.901Z","level":"info","message":"Attempting database reconnection","service":"db-service","hostname":"app-server-01","database":"users_db","attempt":1}
+{"timestamp":"2023-03-22T16:15:52.234Z","level":"info","message":"Database connection re-established","service":"db-service","hostname":"app-server-01","database":"users_db"}
+{"timestamp":"2023-03-22T17:30:45.567Z","level":"info","message":"API request completed","service":"api-server","hostname":"app-server-01","path":"/api/products","method":"POST","status":201,"duration":180}
+{"timestamp":"2023-03-22T18:12:23.890Z","level":"warn","message":"Memory usage approaching threshold","service":"monitoring","hostname":"app-server-01","memory":85.7,"threshold":90}
+{"timestamp":"2023-03-22T19:05:34.123Z","level":"info","message":"Cache updated","service":"cache-service","hostname":"app-server-01","keys_updated":75}
+{"timestamp":"2023-03-22T20:15:45.456Z","level":"error","message":"Failed to process payment","service":"payment","hostname":"app-server-01","transaction_id":"tx_123456","error":"Insufficient funds"}
+{"timestamp":"2023-03-22T21:20:12.789Z","level":"info","message":"System backup started","service":"backup","hostname":"app-server-01","backup_id":"backup_20230322"}
+{"timestamp":"2023-03-22T21:25:34.012Z","level":"info","message":"System backup completed","service":"backup","hostname":"app-server-01","backup_id":"backup_20230322","size_mb":1250,"duration":"00:05:22"}
+{"timestamp":"2023-03-22T22:30:45.345Z","level":"info","message":"User login successful","service":"auth-service","hostname":"app-server-01","userId":"user789","ip":"192.168.1.105"}
+{"timestamp":"2023-03-22T23:45:12.678Z","level":"info","message":"Application graceful shutdown initiated","service":"api-server","hostname":"app-server-01"}
+{"timestamp":"2023-03-22T23:45:15.901Z","level":"info","message":"Application shutdown complete","service":"api-server","hostname":"app-server-01","uptime":"15:30:53"} 

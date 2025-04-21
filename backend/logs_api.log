@@ -1,0 +1,107 @@
+2025-03-25 15:19:48,820 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 15:19:48,820 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 15:19:48,829 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:19:49,612 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:19:49,617 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:20:24,184 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:20:24] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:20:24,554 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:20:24] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 422 -
+2025-03-25 15:20:26,460 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:20:26] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 422 -
+2025-03-25 15:20:29,246 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:20:29] "[31m[1mPOST /api/logs/upload HTTP/1.1[0m" 422 -
+2025-03-25 15:21:52,013 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\__init__.py', reloading
+2025-03-25 15:21:52,013 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\__init__.py', reloading
+2025-03-25 15:21:52,013 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\__init__.py', reloading
+2025-03-25 15:21:52,784 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:21:53,618 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:21:53,624 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:22:01,134 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\models\\log_file.py', reloading
+2025-03-25 15:22:01,136 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\models\\log_file.py', reloading
+2025-03-25 15:22:01,136 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\models\\log_file.py', reloading
+2025-03-25 15:22:01,846 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:22:02,673 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:22:02,678 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:22:11,224 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 15:22:11,224 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 15:22:11,232 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:22:12,020 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:22:12,026 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:23:12,243 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:12] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:23:12,318 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:12] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:23:13,398 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:13] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:23:13,736 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:13] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:23:15,002 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:15] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:23:15,344 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:15] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:23:17,614 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:17] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:23:17,954 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:17] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:23:24,018 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:24] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:23:24,063 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:24] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:23:25,890 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:25] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:23:26,235 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:23:26] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:25:19,212 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:19,212 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:19,213 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:19,213 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:19,306 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:19,306 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:19,307 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:19,307 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:19,307 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:19,611 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:25:20,358 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:25:20,424 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:25:20,429 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:25:21,108 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:25:21,113 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:25:39,916 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:39,916 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:39,916 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:39,916 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:39,916 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:40,427 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:25:40,755 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:25:41,256 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:25:41,262 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:25:41,537 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:25:41,542 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:25:43,079 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:43,079 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:43,079 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:43,080 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:43,080 - werkzeug - INFO -  * Detected change in 'C:\\Users\\吴天翼\\log-analysis-system\\backend\\app\\routes\\auth.py', reloading
+2025-03-25 15:25:43,436 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:25:43,709 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:25:44,225 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:25:44,232 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:25:44,480 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:25:44,484 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:26:12,564 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 15:26:12,564 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 15:26:12,570 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:26:13,357 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:26:13,362 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:26:38,377 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:26:38] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:26:38,425 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:26:38] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:26:40,176 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:26:40] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:26:40,516 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:26:40] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:26:42,323 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:26:42] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:26:42,658 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:26:42] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:26:49,087 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:26:49] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:26:49,137 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:26:49] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:28:05,279 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:28:05] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:28:05,335 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:28:05] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:29:06,091 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:29:06] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:29:06,136 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:29:06] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:29:06,856 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:29:06] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:29:07,200 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:29:07] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:29:48,711 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-25 15:29:48,711 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-25 15:29:48,718 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:29:49,493 - werkzeug - WARNING -  * Debugger is active!
+2025-03-25 15:29:49,499 - werkzeug - INFO -  * Debugger PIN: 447-522-129
+2025-03-25 15:30:07,729 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:30:07] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:30:08,096 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:30:08] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
+2025-03-25 15:30:08,823 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:30:08] "POST /api/auth/login HTTP/1.1" 200 -
+2025-03-25 15:30:09,460 - werkzeug - INFO - 127.0.0.1 - - [25/Mar/2025 15:30:09] "[31m[1mGET /api/logs/list HTTP/1.1[0m" 401 -
