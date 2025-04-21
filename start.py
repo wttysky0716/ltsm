@@ -59,13 +59,26 @@ def install_dependencies():
 def start_backend():
     """启动后端服务"""
     print("正在启动后端服务...")
-    # 使用非调试模式启动后端
-    if is_windows():
-        # 在Windows上使用waitress作为生产服务器
-        return subprocess.Popen([get_python_executable(), 'backend/app.py'])
-    else:
-        # 在Linux/Mac上使用gunicorn作为生产服务器
-        return subprocess.Popen([get_python_executable(), 'backend/app.py'])
+    try:
+        # 打开日志文件
+        log_file = open('backend.log', 'w')
+        
+        # 使用简单应用
+        if is_windows():
+            return subprocess.Popen(
+                [get_python_executable(), 'backend/simple_app.py'],
+                stdout=log_file,
+                stderr=log_file
+            )
+        else:
+            return subprocess.Popen(
+                [get_python_executable(), 'backend/simple_app.py'],
+                stdout=log_file,
+                stderr=log_file
+            )
+    except Exception as e:
+        print(f"启动后端服务失败: {e}")
+        return None
 
 def start_frontend():
     """启动前端服务"""
@@ -103,7 +116,7 @@ if __name__ == "__main__":
     
     print("\n=== 系统已启动 ===")
     print("前端地址: http://localhost:8080")
-    print("后端API地址: http://localhost:5000")
+    print("后端API地址: http://localhost:5001")
     print("\n要停止服务，请按 Ctrl+C")
     
     try:

@@ -99,48 +99,23 @@ export default {
       this.$refs.loginForm.validate(async valid => {
         if (valid) {
           try {
-            console.log('开始登录请求，用户名:', this.loginForm.username);
-            
-            // 清除任何之前的登录状态
-            this.$store.dispatch('logout');
-            
-            // 尝试登录
-            const response = await this.$store.dispatch('login', this.loginForm)
-            console.log('登录响应:', response);
-            
-            // 验证登录状态
-            if (!this.$store.state.authenticated || !this.$store.state.token) {
-              throw new Error('登录后状态无效');
-            }
-            
+            await this.$store.dispatch('login', this.loginForm)
             this.$message.success('登录成功')
             
-            // 延迟后跳转，确保状态已更新
-            setTimeout(() => {
-              // 重定向到之前尝试访问的页面或首页
-              const path = this.redirect || '/';
-              console.log('重定向到:', path);
-              this.$router.push({ path });
-            }, 300);
-            
+            // 重定向到之前尝试访问的页面或首页
+            this.$router.push({ path: this.redirect || '/' })
           } catch (error) {
-            console.error('登录处理错误:', error);
-            
-            let errorMsg = '登录失败';
+            let errorMsg = '登录失败'
             if (error.response && error.response.data) {
-              console.error('服务器错误响应:', error.response.data);
-              errorMsg = error.response.data.message || errorMsg;
-            } else if (error.message) {
-              errorMsg = error.message;
+              errorMsg = error.response.data.message || errorMsg
             }
-            
-            this.$message.error(errorMsg);
+            this.$message.error(errorMsg)
           }
         } else {
-          console.log('表单验证失败');
-          return false;
+          console.log('表单验证失败')
+          return false
         }
-      });
+      })
     }
   }
 }

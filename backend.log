@@ -1,0 +1,7 @@
+成功导入数据生成器
+成功创建仪表盘控制器
+Traceback (most recent call last):
+  File "C:\Users\吴天翼\OneDrive\桌面\异常检测\log-analysis-system\backend\simple_app.py", line 79, in <module>
+    logger.debug("准备启动Flask应用，监听端口: 5001")
+    ^^^^^^
+NameError: name 'logger' is not defined

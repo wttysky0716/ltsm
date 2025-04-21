@@ -84,90 +84,54 @@ export default {
     },
     
     async handleFileChange(event) {
+      const file = event.target.files[0]
+      if (!file) return
+      
+      // 检查文件大小
+      if (file.size > 500 * 1024 * 1024) { // 500MB
+        this.$message.error('文件大小不能超过500MB')
+        event.target.value = ''
+        return
+      }
+      
+      // 检查文件扩展名
+      const extension = file.name.split('.').pop().toLowerCase()
+      const allowedExtensions = ['log', 'txt', 'csv', 'json']
+      if (!allowedExtensions.includes(extension)) {
+        this.$message.error('不支持的文件类型')
+        event.target.value = ''
+        return
+      }
+      
+      // 创建表单数据
+      const formData = new FormData()
+      formData.append('file', file)
+      
+      this.uploading = true
+      const loadingInstance = this.$loading({
+        lock: true,
+        text: '正在上传文件...',
+        spinner: 'el-icon-loading',
+        background: 'rgba(0, 0, 0, 0.7)'
+      })
+      
       try {
-        const file = event.target.files[0]
-        if (!file) {
-          console.warn('No file selected');
-          return;
+        const response = await this.$store.dispatch('uploadLogFile', formData)
+        this.$message.success('文件上传成功')
+        
+        // 将新上传的文件添加到列表
+        this.fileList.unshift(response.file)
+      } catch (error) {
+        let errorMsg = '文件上传失败'
+        if (error.response && error.response.data) {
+          errorMsg = error.response.data.message || errorMsg
         }
-        
-        console.log('Selected file:', file.name, file.type, file.size);
-        
-        // 检查文件大小
-        const maxSize = 500 * 1024 * 1024 // 500MB
-        if (file.size > maxSize) {
-          this.$message.error(`文件大小不能超过500MB，当前文件大小：${(file.size / (1024 * 1024)).toFixed(2)}MB`)
-          event.target.value = ''
-          return
-        }
-        
-        // 检查文件扩展名
-        const extension = file.name.split('.').pop().toLowerCase()
-        const allowedExtensions = ['log', 'txt', 'csv', 'json']
-        if (!allowedExtensions.includes(extension)) {
-          this.$message.error(`不支持的文件类型：${extension}，支持的类型：${allowedExtensions.join(', ')}`)
-          event.target.value = ''
-          return
-        }
-        
-        // 创建表单数据
-        const formData = new FormData()
-        formData.append('file', file)
-        
-        this.uploading = true
-        const loadingInstance = this.$loading({
-          lock: true,
-          text: `正在上传文件：${file.name}...`,
-          spinner: 'el-icon-loading',
-          background: 'rgba(0, 0, 0, 0.7)'
-        })
-        
-        try {
-          console.log('开始上传文件:', file.name)
-          
-          // 检查token是否存在
-          const token = this.$store.state.token
-          console.log('Token exists:', !!token);
-          
-          const response = await this.$store.dispatch('uploadLogFile', formData)
-          console.log('上传响应:', response)
-          
-          this.$message.success(`文件 ${file.name} 上传成功`)
-          
-          // 将新上传的文件添加到列表
-          this.fileList.unshift(response.file)
-          
-        } catch (error) {
-          console.error('Upload component error:', error)
-          
-          // 详细记录错误
-          if (error.response) {
-            console.error('Status:', error.response.status);
-            console.error('Headers:', error.response.headers);
-            console.error('Data:', error.response.data);
-          } else if (error.request) {
-            console.error('Request made but no response:', error.request);
-          } else {
-            console.error('Error message:', error.message);
-          }
-          
-          let errorMsg = '文件上传失败'
-          if (error.response && error.response.data) {
-            const detail = error.response.data.detail || ''
-            errorMsg = `${error.response.data.message || errorMsg}${detail ? ': ' + detail : ''}`
-          }
-          this.$message.error(errorMsg)
-        } finally {
-          // 重置文件输入框
-          event.target.value = ''
-          this.uploading = false
-          loadingInstance.close()
-        }
-      } catch (globalError) {
-        console.error('全局错误:', globalError);
-        this.$message.error('上传过程中发生错误，请查看控制台');
-        event.target.value = '';
-        this.uploading = false;
+        this.$message.error(errorMsg)
+      } finally {
+        // 重置文件输入框
+        event.target.value = ''
+        this.uploading = false
+        loadingInstance.close()
       }
     },
     

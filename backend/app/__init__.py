@@ -4,6 +4,11 @@ from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from .config import config
 from .models import db, bcrypt
+import logging
+
+# 配置全局日志
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 jwt = JWTManager()
 
@@ -22,23 +27,23 @@ def create_app(config_name='default'):
     # 添加JWT错误处理
     @jwt.expired_token_loader
     def expired_token_callback(jwt_header, jwt_payload):
-        return jsonify({"message": "令牌已过期", "error": "token_expired"}), 401
+        logger.warning(f"令牌已过期: {jwt_payload}")
+        return jsonify({"message": "令牌已过期，请重新登录", "error": "token_expired"}), 401
     
     @jwt.invalid_token_loader
     def invalid_token_callback(error):
-        return jsonify({"message": "无效的令牌", "error": "invalid_token"}), 401
+        logger.warning(f"令牌无效: {error}")
+        return jsonify({"message": "无效的认证令牌", "error": "invalid_token"}), 401
     
     @jwt.unauthorized_loader
     def missing_token_callback(error):
-        return jsonify({"message": "缺少令牌", "error": "missing_token"}), 401
+        logger.warning(f"缺少令牌: {error}")
+        return jsonify({"message": "缺少认证令牌", "error": "missing_token"}), 401
     
-    @jwt.needs_fresh_token_loader
-    def token_not_fresh_callback():
-        return jsonify({"message": "需要刷新令牌", "error": "fresh_token_required"}), 401
-    
-    @jwt.revoked_token_loader
-    def revoked_token_callback(jwt_header, jwt_payload):
-        return jsonify({"message": "令牌已被撤销", "error": "token_revoked"}), 401
+    @jwt.token_verification_failed_loader
+    def verification_failed_callback():
+        logger.warning("令牌验证失败")
+        return jsonify({"message": "令牌验证失败", "error": "verification_failed"}), 401
     
     # 注册蓝图
     from .routes.auth import auth_bp

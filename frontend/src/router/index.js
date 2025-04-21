@@ -95,12 +95,6 @@ router.beforeEach((to, from, next) => {
   // 设置页面标题
   document.title = to.meta.title ? `${to.meta.title} - 日志态势感知系统` : '日志态势感知系统'
   
-  // 已登录用户尝试访问登录/注册页时重定向到首页
-  const isLoginPage = to.path === '/login' || to.path === '/register'
-  if (isLoginPage && store.state.authenticated) {
-    return next({ path: '/' })
-  }
-  
   // 检查是否需要身份验证
   if (to.matched.some(record => record.meta.requiresAuth)) {
     // 该路由需要身份验证，检查是否已登录

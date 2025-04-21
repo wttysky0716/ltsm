@@ -39,19 +39,11 @@ http.interceptors.response.use(
     return response.data
   },
   error => {
-    console.error('API Error:', error);
-    
-    // 只在有明确的401状态码时才登出
     if (error.response && error.response.status === 401) {
-      console.log('认证失败，退出登录');
+      // token过期或无效，重定向到登录页
       store.dispatch('logout')
-      
-      // 只有在用户不在登录页时，才跳转到登录页
-      if (router.currentRoute.path !== '/login') {
-        router.push('/login')
-      }
+      router.push('/login')
     }
-    
     return Promise.reject(error)
   }
 )

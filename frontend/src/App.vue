@@ -13,16 +13,9 @@ export default {
     const user = localStorage.getItem('user')
     
     if (token && user) {
-      try {
-        // 仅从本地存储恢复状态，不进行验证
-        this.$store.commit('setToken', token)
-        this.$store.commit('setUser', JSON.parse(user))
-        this.$store.commit('setAuthenticated', true)
-      } catch (error) {
-        console.error('Failed to restore user session:', error)
-        localStorage.removeItem('token')
-        localStorage.removeItem('user')
-      }
+      this.$store.commit('setToken', token)
+      this.$store.commit('setUser', JSON.parse(user))
+      this.$store.commit('setAuthenticated', true)
     }
   }
 }

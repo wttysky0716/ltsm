@@ -31,7 +31,7 @@ def register():
     db.session.commit()
     
     # 生成令牌
-    access_token = create_access_token(identity=user.id)
+    access_token = create_access_token(identity=str(user.id))
     
     return jsonify({
         'message': '注册成功',
@@ -61,7 +61,7 @@ def login():
         return jsonify({'message': '用户名或密码错误'}), 401
     
     # 生成令牌
-    access_token = create_access_token(identity=user.id)
+    access_token = create_access_token(identity=str(user.id))
     
     return jsonify({
         'message': '登录成功',
@@ -78,7 +78,7 @@ def login():
 @jwt_required()
 def get_profile():
     """获取用户个人资料"""
-    user_id = get_jwt_identity()
+    user_id = int(get_jwt_identity())
     user = User.query.get(user_id)
     
     if not user:
@@ -89,29 +89,4 @@ def get_profile():
         'username': user.username,
         'email': user.email,
         'created_at': user.created_at.strftime('%Y-%m-%d %H:%M:%S')
-    }), 200
-
-
-@auth_bp.route('/validate', methods=['GET'])
-@jwt_required()
-def validate_token():
-    """验证令牌有效性"""
-    # 如果能执行到这里，说明令牌有效
-    current_user_id = get_jwt_identity()
-    user = User.query.get(current_user_id)
-    
-    if not user:
-        return jsonify({
-            'message': '无效的用户',
-            'valid': False
-        }), 401
-    
-    return jsonify({
-        'message': '令牌有效',
-        'valid': True,
-        'user': {
-            'id': user.id,
-            'username': user.username,
-            'email': user.email
-        }
     }), 200 

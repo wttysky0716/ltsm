@@ -59,24 +59,13 @@ export default new Vuex.Store({
     async login({ commit }, credentials) {
       commit('setLoadingStatus', true)
       try {
-        console.log('尝试登录:', credentials.username);
         const response = await Vue.prototype.$http.post('/auth/login', credentials)
-        console.log('登录成功, 返回数据:', response);
-        
-        // 确保返回了有效的令牌
-        if (!response.access_token) {
-          console.error('服务器没有返回有效的令牌');
-          commit('setLoadingStatus', false)
-          throw new Error('登录成功但没有返回有效的令牌');
-        }
-        
         commit('setToken', response.access_token)
         commit('setUser', response.user)
         commit('setAuthenticated', true)
         commit('setLoadingStatus', false)
         return response
       } catch (error) {
-        console.error('登录失败:', error);
         commit('setLoadingStatus', false)
         throw error
       }
@@ -86,24 +75,13 @@ export default new Vuex.Store({
     async register({ commit }, userData) {
       commit('setLoadingStatus', true)
       try {
-        console.log('尝试注册:', userData.username);
         const response = await Vue.prototype.$http.post('/auth/register', userData)
-        console.log('注册成功, 返回数据:', response);
-        
-        // 确保返回了有效的令牌
-        if (!response.access_token) {
-          console.error('服务器没有返回有效的令牌');
-          commit('setLoadingStatus', false)
-          throw new Error('注册成功但没有返回有效的令牌');
-        }
-        
         commit('setToken', response.access_token)
         commit('setUser', response.user)
         commit('setAuthenticated', true)
         commit('setLoadingStatus', false)
         return response
       } catch (error) {
-        console.error('注册失败:', error);
         commit('setLoadingStatus', false)
         throw error
       }
@@ -111,7 +89,6 @@ export default new Vuex.Store({
     
     // 用户退出
     logout({ commit }) {
-      console.log('用户退出登录');
       commit('clearUserData')
     },
     
@@ -147,30 +124,14 @@ export default new Vuex.Store({
     async uploadLogFile({ commit }, formData) {
       commit('setLoadingStatus', true)
       try {
-        console.log('Preparing to upload file...');
-        // 检查 formData
-        for(let pair of formData.entries()) {
-          console.log('FormData:', pair[0], pair[1]);
-        }
-        
         const response = await Vue.prototype.$http.post('/logs/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
-          },
-          // 添加上传进度
-          onUploadProgress: (progressEvent) => {
-            const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
-            console.log('Upload progress:', percentCompleted, '%');
           }
         })
-        console.log('Upload response:', response);
         commit('setLoadingStatus', false)
         return response
       } catch (error) {
-        console.error('Upload error in store:', error);
-        if (error.response) {
-          console.error('Error response:', error.response.data);
-        }
         commit('setLoadingStatus', false)
         throw error
       }
